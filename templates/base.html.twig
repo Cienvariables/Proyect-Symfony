@@ -18,11 +18,20 @@
 			<a class="navbar-brand " href="{{ path("home") }} ">
 				<p class="pl-3 d-inline font-weight-bold" style="color: #444;">Home</p>
 			</a>
+			<a class="navbar-brand " href="{{ path("newgame") }} ">
+				<p class="pl-3 d-inline font-weight-bold" style="color: #444;">Formulario</p>
+			</a>
+			{# <a class="navbar-brand " href="{{ path("showgame"{'id':games.id}) }} ">
+													<p class="pl-3 d-inline font-weight-bold" style="color: #444;">Id1</p>
+												</a> #}
+
+
 			<button class="btn btn-dark">Sign up</button>
 		</nav>
+		{% block bodyForm %}{% endblock %}
 		{% block body %}{% endblock %}
 		<footer class="mt-5 p-3 text-center">
 			The End</footer>
 		{% block javascripts %}{% endblock %}
 	</body>
-</html>
+</html></body></html>

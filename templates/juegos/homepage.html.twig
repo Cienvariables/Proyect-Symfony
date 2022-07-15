@@ -1,7 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-
+	{% for message in app.flashes('exito') %}
+		<p class="btn btn-danger pt-2 text-center">{{message}}</p>
+	{% endfor %}
 	<div class="container">
 		<div class="row mb-3">
 			<div class="col">
@@ -23,13 +25,24 @@
 										{# //Como pongo el titulo y el enlace juntos #}
 									</h1>
 									{# <a>
-																																														href="{{path("showgame, {'id':game.id}")}},
-																																														{{game.title}}</a> #}
+																																																																																																																																																																																																																																																																																																										href="{{path("showgame, {'id':game.id}")}},
+																																																																																																																																																																																																																																																																																																										{{game.title}}</a> #}
 
 									<div class="q-display p-3">
 										<p class="pt-4">
 											<strong>{{ game.platform }}</strong>
 										</p>
+									</div>
+									<div class="col">
+										<button class="btn btn-question m-2">
+											<a href="{{ path("showgame",{'id':game.id})}}">Más</a>
+										</button>
+										<button class="btn btn-question m-2">
+											<a href="{{ path("editgame",{'id':game.id})}}">Editar</a>
+										</button>
+										<button class="btn btn-question m-2">
+											<a href="{{ path("editgame",{'id':game.id})}}">BorrarFalta</a>
+										</button>
 									</div>
 								</div>
 							</div>
