@@ -1,2 +1,2 @@
 
-Proyecto Symfony con Julio 2022
+Proyecto Symfony. Julio 2022
